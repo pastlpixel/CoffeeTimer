@@ -1,0 +1,72 @@
+/* COLOR PALETTE */
+   :root {
+    --color-primary: #3498db;     /* main brand color (blue) */
+    --color-secondary: #2ecc71;   /* accent color (green) */
+    --color-accent: #e67e22;      /* attention color (orange) */
+    --color-light: #f4f4f4;       /* background light */
+    --color-dark: #333333;        /* text or dark backgrounds */
+    --color-white: #ffffff;       /* pure white */
+    --color-black: #000000;       /* pure black */
+    --color-body-background: #cab69e; 
+    --color-coffee: #d0a77c;
+    --color-white-brown: #f8e8d8;
+    --color-middle-brown:  	#73503d;
+    --color-dark-brown: #522c2c;
+   }
+
+
+/* BODY */
+body {
+    background-color: var(--color-coffee);
+}
+
+
+/* START MENU */
+.start-menu h1 {
+    width: 90%;     /* width relative to parent element (div "start-menu"); same size as image grid */
+    margin: 0 auto;     /* centers header horizontally while still being box element */
+    text-align: center;     /* center text */
+    background-color: var(--color-white-brown);    /* set background color for text box */
+    color: var(--color-dark-brown);     /* set color for header text */
+    font-size: 8vw;     /* size relative to viewport (scales with browser size) */
+    padding: 5% 3%;     /* relative to parent element (div "start-menu") */
+    border-radius: 1rem;        /* relative to root (<html>); doesn't change with browser size; needs to be small because of overall size, otherwise left&right edges look 'cut off' */
+}
+
+.start-menu .image-grid {
+    display: grid;                    /* enables grid layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
+    grid-template-rows: repeat(2, 1fr);    /* 2 equal-height rows */
+    column-gap: 9%;  /* ⬅ horizontal space between columns; creates slight right shift bc width is added to total width */
+    row-gap: 4%;     /* ⬆ vertical space between rows */
+    width: 90%;                       /* grid takes up 90% of the page width; in alignment with header */
+    margin: 5% 3% 5% 3%;                /* centers the grid horizontally; adjust values after adding row-gap to make sure grid is centered on page*/
+  }
+  
+  .start-menu .image-grid .coffee-type-box {     /* create image boxes */
+    background-color: var(--color-white-brown);       /* set color for image boxes */
+    border-radius: 20%;     /* round egdes for image boxes */
+    padding: 5%;        /* center images inside boxes */
+    width: 100%;          /* image fills its grid cell */
+    height: auto;         /* keeps the correct aspect ratio */
+    object-fit: cover;    /* ensures images fill space nicely */
+    transition: transform 0.8s ease; /* delays zoom */
+    text-align: center;     /* shift all content in image box (text and pictures */
+    font-size: 2.5vw;       /* size of text in image box */
+    line-height: 0.5rem;    /* distance between heading and paragraph in image box */
+    color: var(--color-middle-brown);    /* color for paragraphs */
+  }
+
+  .start-menu .image-grid .coffee-type-box img {
+    width: 80%;     /* set width of image in image box to 80% relative to image box width (parent element) */
+    height: auto;       /* keep ratios */
+  }
+
+  .start-menu .image-grid .coffee-type-box h3 {
+    color: var(--color-dark-brown);      /* color of headings in image box */
+  }
+  
+  .start-menu .image-grid .coffee-type-box:hover {
+    transform: scale(1.05); /* optional: slight zoom on hover */
+  }
+  
