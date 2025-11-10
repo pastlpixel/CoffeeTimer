@@ -43,30 +43,34 @@ body {
     margin: 5% 3% 5% 3%;                /* centers the grid horizontally; adjust values after adding row-gap to make sure grid is centered on page*/
   }
   
-  .start-menu .image-grid .coffee-type-box {     /* create image boxes */
-    background-color: var(--color-white-brown);       /* set color for image boxes */
-    border-radius: 20%;     /* round egdes for image boxes */
-    padding: 5%;        /* center images inside boxes */
-    width: 100%;          /* image fills its grid cell */
-    height: auto;         /* keeps the correct aspect ratio */
-    object-fit: cover;    /* ensures images fill space nicely */
-    transition: transform 0.8s ease; /* delays zoom */
-    text-align: center;     /* shift all content in image box (text and pictures */
-    font-size: 2.5vw;       /* size of text in image box */
-    line-height: 0.5rem;    /* distance between heading and paragraph in image box */
-    color: var(--color-middle-brown);    /* color for paragraphs */
-  }
+.start-menu .image-grid .coffee-type-box {     /* create image boxes */
+  background-color: var(--color-white-brown);       /* set color for image boxes */
+  border-radius: 20%;     /* round egdes for image boxes */
+  padding: 5%;        /* center images inside boxes */
+  width: 100%;          /* image fills its grid cell */
+  height: auto;         /* keeps the correct aspect ratio */
+  object-fit: cover;    /* ensures images fill space nicely */
+  transition: transform 0.8s ease; /* delays zoom */
+  text-align: center;     /* shift all content in image box (text and pictures */
+  font-size: 2.5vw;       /* size of text in image box */
+  line-height: 0.5rem;    /* distance between heading and paragraph in image box */
+  color: var(--color-middle-brown);    /* color for paragraphs */
+}
 
-  .start-menu .image-grid .coffee-type-box img {
-    width: 80%;     /* set width of image in image box to 80% relative to image box width (parent element) */
-    height: auto;       /* keep ratios */
-  }
+.start-menu a {
+  text-decoration: none;    /* remove underline from links */
+}
 
-  .start-menu .image-grid .coffee-type-box h3 {
-    color: var(--color-dark-brown);      /* color of headings in image box */
-  }
-  
-  .start-menu .image-grid .coffee-type-box:hover {
-    transform: scale(1.05); /* optional: slight zoom on hover */
-  }
-  
+.start-menu .image-grid .coffee-type-box img {
+  width: 80%;     /* set width of image in image box to 80% relative to image box width (parent element) */
+  height: auto;       /* keep ratios */
+}
+
+.start-menu .image-grid .coffee-type-box h3 {
+  color: var(--color-dark-brown);      /* color of headings in image box */
+}
+
+.start-menu .image-grid .coffee-type-box:hover {
+  transform: scale(1.05); /* optional: slight zoom on hover */
+}
+
