@@ -43,30 +43,81 @@ body {
     margin: 5% 3% 5% 3%;                /* centers the grid horizontally; adjust values after adding row-gap to make sure grid is centered on page*/
   }
   
-  .start-menu .image-grid .coffee-type-box {     /* create image boxes */
-    background-color: var(--color-white-brown);       /* set color for image boxes */
-    border-radius: 20%;     /* round egdes for image boxes */
-    padding: 5%;        /* center images inside boxes */
-    width: 100%;          /* image fills its grid cell */
-    height: auto;         /* keeps the correct aspect ratio */
-    object-fit: cover;    /* ensures images fill space nicely */
-    transition: transform 0.8s ease; /* delays zoom */
-    text-align: center;     /* shift all content in image box (text and pictures */
-    font-size: 2.5vw;       /* size of text in image box */
-    line-height: 0.5rem;    /* distance between heading and paragraph in image box */
-    color: var(--color-middle-brown);    /* color for paragraphs */
-  }
+.start-menu .image-grid .coffee-type-box {     /* create image boxes */
+  background-color: var(--color-white-brown);       /* set color for image boxes */
+  border-radius: 20%;     /* round egdes for image boxes */
+  padding: 5%;        /* center images inside boxes */
+  width: 100%;          /* image fills its grid cell */
+  height: auto;         /* keeps the correct aspect ratio */
+  object-fit: cover;    /* ensures images fill space nicely */
+  transition: transform 0.8s ease; /* delays zoom */
+  text-align: center;     /* shift all content in image box (text and pictures */
+  font-size: 2.5vw;       /* size of text in image box */
+  line-height: 0.5rem;    /* distance between heading and paragraph in image box */
+  color: var(--color-middle-brown);    /* color for paragraphs */
+}
 
-  .start-menu .image-grid .coffee-type-box img {
-    width: 80%;     /* set width of image in image box to 80% relative to image box width (parent element) */
-    height: auto;       /* keep ratios */
-  }
+.start-menu a {
+  text-decoration: none;    /* remove underline from links */
+}
 
-  .start-menu .image-grid .coffee-type-box h3 {
-    color: var(--color-dark-brown);      /* color of headings in image box */
-  }
-  
-  .start-menu .image-grid .coffee-type-box:hover {
-    transform: scale(1.05); /* optional: slight zoom on hover */
-  }
-  
+.start-menu .image-grid .coffee-type-box img {
+  width: 80%;     /* set width of image in image box to 80% relative to image box width (parent element) */
+  height: auto;       /* keep ratios */
+}
+
+.start-menu .image-grid .coffee-type-box h3 {
+  color: var(--color-dark-brown);      /* color of headings in image box */
+}
+
+.start-menu .image-grid .coffee-type-box:hover {
+  transform: scale(1.05); /* optional: slight zoom on hover */
+}
+
+
+/* TIMER PAGE */
+.timer-body {                   /* work around to center timer box vertically and horizontally and not affect starting page */
+  display: flex;                /* turn body into a flex container */
+  flex-direction: column;    /* ⬅ stack children vertically */
+  justify-content: center;      /* center horizontally */
+  align-items: center;          /* center vertically */
+  height: 100vh;                /* make body fill full viewport height */
+  margin: 0;                    /* remove default body margin */
+  gap: 1rem;                     /* space between timer box and countdown text */
+}
+
+.timer-box {
+  background-color: var(--color-white-brown);       /* set color for timer boxes */
+  width: 70%;         /* width relative to parent element (div "timer-body") */
+  height: 50%;        /* height relative to parent element (div "timer-body") */
+  padding: 5%;        /* space inside box */
+  border-radius: 50%;      /* round edges */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
+  display: flex;                /* turn timer box into a flex container */
+  justify-content: center;      /* center horizontally */
+  align-items: center;          /* center vertically */
+}
+
+.timer-box img {
+  width: 80%;     /* set width of image in timer box to 70% relative to timer box width (parent element) */
+  height: auto;       /* keep ratios */
+}
+
+.countdown h1 {
+  font-size: 9vw;       /* size relative to viewport (scales with browser size) */
+  color: var(--color-dark-brown);   /* set color for countdown text */
+}
+
+#timer-button {
+  background-color: var(--color-middle-brown);   /* button background color */
+  color: var(--color-white-brown);       /* button text color */
+  border: none;        /* remove default border */
+  padding: 1rem 2rem;     /* space inside button */
+  font-size: 4vw;        /* size relative to viewport (scales with browser size) */
+  border-radius: 1rem;       /* round edges */
+  cursor: pointer;      /* change cursor on hover */
+}
+
+#timer-button:hover {
+  background-color: var(--color-dark-brown);
+}
