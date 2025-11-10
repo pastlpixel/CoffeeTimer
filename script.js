@@ -1,5 +1,7 @@
 // --- TIMER SETUP ---
-let time = 15 * 60; // 15 minutes in seconds
+// read start time from body attribute
+const countdownStart = parseInt(document.body.dataset.countdownStart); // parse defined countdown start time
+let time = countdownStart * 60; // minutes in seconds
 let timerInterval = null; // to store interval reference
 
 const timerElement = document.getElementById('timer');
@@ -35,7 +37,7 @@ function startCountdown() {
 function resetCountdown() {
   clearInterval(timerInterval);
   timerInterval = null;
-  time = 15 * 60; // reset to 15 minutes
+  time = countdownStart * 60; // reset to minutes
   updateTimer();
   button.textContent = "Start"; // change button text back
 }
