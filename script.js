@@ -21,6 +21,8 @@ function updateTimer() {
     timerElement.textContent = "Done!";
     timerInterval = null; // reset interval reference
     button.textContent = "Back"; // change to "Break" when timer finishes
+    const bellSound = new Audio("sounds/bell.wav");
+    bellSound.play();  // play bell sound when timer ends
   }
 }
 
