@@ -46,7 +46,7 @@ body {
   object-fit: cover;    /* ensures images fill space nicely */
   transition: transform 0.8s ease; /* delays zoom */
   text-align: center;     /* shift all content in image box (text and pictures */
-  font-size: 2.5vw;       /* size of text in image box */
+  font-size: 3vw;       /* size of text in image box */
   line-height: 0.5rem;    /* distance between heading and paragraph in image box */
   color: var(--color-middle-brown);    /* color for paragraphs */
 }
