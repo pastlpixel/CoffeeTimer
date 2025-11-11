@@ -36,34 +36,11 @@ This project was built to create a cozy version of a simple Pomodoro Timer.
 
 
 <h2>📸 Screenshots </h2>
-<style>
-    figcaption {
-        text-align: center;
-    }
-    figure {
-        height: 320px;
-        width: 240px;
-    }
-    .screenshot-grid {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(1, 1fr);
-    }
-</style>
-<div class="screenshot-grid">
-    <figure>
-        <img src="screenshots/StartingPage.png" alt="Starting page of the Pomodoro Coffee Timer">
-        <figcaption>Starting page</figcaption>
-    </figure>
-    <figure>
-        <img src="screenshots/TimerPage_Espresso.png" alt="Example of the timer page">
-        <figcaption>Espresso timer page</figcaption>
-    </figure>
-    <figure>
-        <img src="screenshots/TimerPage_LatteMacchiato.png" alt="Example of the timer page with started countdown">
-        <figcaption>Latte Macchiato timer page</figcaption>
-    </figure>
-</div>
+<p float="center">
+    <img src="screenshots/StartingPage.png" alt="Starting page of the Pomodoro Coffee Timer" height="320" width="240" display="inline">
+    <img src="screenshots/TimerPage_Espresso.png" alt="Example of the timer page" height="320" width="240" display="inline">
+    <img src="screenshots/TimerPage_LatteMacchiato.png" alt="Example of the timer page with started countdown" height="320" width="240">
+</p>
 
 
 <h2> License </h2>
