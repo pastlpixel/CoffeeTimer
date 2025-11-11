@@ -1,13 +1,7 @@
 /* COLOR PALETTE */
    :root {
-    --color-primary: #3498db;     /* main brand color (blue) */
-    --color-secondary: #2ecc71;   /* accent color (green) */
-    --color-accent: #e67e22;      /* attention color (orange) */
-    --color-light: #f4f4f4;       /* background light */
-    --color-dark: #333333;        /* text or dark backgrounds */
     --color-white: #ffffff;       /* pure white */
     --color-black: #000000;       /* pure black */
-    --color-body-background: #cab69e; 
     --color-coffee: #d0a77c;
     --color-white-brown: #f8e8d8;
     --color-middle-brown:  	#73503d;
@@ -17,7 +11,7 @@
 
 /* BODY */
 body {
-    background-color: var(--color-coffee);
+    background-color: var(--color-coffee);    /* set background color for body */
 }
 
 
@@ -72,6 +66,7 @@ body {
 
 .start-menu .image-grid .coffee-type-box:hover {
   transform: scale(1.05); /* optional: slight zoom on hover */
+  background-color: var(--color-white);
 }
 
 
@@ -83,7 +78,21 @@ body {
   align-items: center;          /* center vertically */
   height: 100vh;                /* make body fill full viewport height */
   margin: 0;                    /* remove default body margin */
-  gap: 1rem;                     /* space between timer box and countdown text */
+  gap:0.81rem;                     /* space between timer box and countdown text */
+}
+
+#back-button {
+  background-color: var(--color-middle-brown);   /* button background color */
+  color: var(--color-white-brown);       /* button text color */
+  border: none;        /* remove default border */
+  padding: 0.5em 1rem;     /* space inside button */
+  font-size: 3vw;        /* size relative to viewport (scales with browser size) */
+  border-radius: 1rem;       /* round edges */
+  cursor: pointer;      /* change cursor on hover */
+}
+
+#back-button:hover {
+  background-color: var(--color-dark-brown);    /* darker color on hover */
 }
 
 .timer-box {
@@ -119,5 +128,5 @@ body {
 }
 
 #timer-button:hover {
-  background-color: var(--color-dark-brown);
+  background-color: var(--color-dark-brown);    /* darker color on hover */
 }
