@@ -11,10 +11,10 @@ Once the session is finished a bell sound notifies you that you should be take a
 <ul>
     <li>Pixel art coffee icons:</li>
         <ul>
-            <li> <img src="pictures/LatteMachiatto.png" height="20px"> Latte Macchiato - 15 minutes</li>
-            <li> <img src="pictures/Espresso.png" height=20px"> Espresso - 30 minutes </li>
-            <li> <img src="pictures/DoubleEspresso.png" height="20px"> Double Espresso - 45 minutes </li>
-            <li> <img src="pictures/Infusion.png" height="20px"> Infusion - 60 minutes </li>
+            <li> <img src="icons/LatteMacchiato.png" height="20px"> Latte Macchiato - 15 minutes</li>
+            <li> <img src="icons/Espresso.png" height="20px"> Espresso - 30 minutes </li>
+            <li> <img src="icons/DoubleEspresso.png" height="20px"> Double Espresso - 45 minutes </li>
+            <li> <img src="icons/Infusion.png" height="20px"> Infusion - 60 minutes </li>
         </ul>
     <li> Simple countdown interface </li>
     <li> Audio alert once time runs out </li>
@@ -33,6 +33,37 @@ Once the session is finished a bell sound notifies you that you should be take a
 
 <h2> Motivation </h2>
 This project was built to create a cozy version of a simple Pomodoro Timer.
+
+
+<h2>📸 Screenshots </h2>
+<style>
+    figcaption {
+        text-align: center;
+    }
+    figure {
+        height: 320px;
+        width: 240px;
+    }
+    .screenshot-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+    }
+</style>
+<div class="screenshot-grid">
+    <figure>
+        <img src="screenshots/StartingPage.png" alt="Starting page of the Pomodoro Coffee Timer">
+        <figcaption>Starting page</figcaption>
+    </figure>
+    <figure>
+        <img src="screenshots/TimerPage_Espresso.png" alt="Example of the timer page">
+        <figcaption>Espresso timer page</figcaption>
+    </figure>
+    <figure>
+        <img src="screenshots/TimerPage_LatteMacchiato.png" alt="Example of the timer page with started countdown">
+        <figcaption>Latte Macchiato timer page</figcaption>
+    </figure>
+</div>
 
 
 <h2> License </h2>
