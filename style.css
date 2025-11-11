@@ -11,7 +11,7 @@
 
 /* BODY */
 body {
-    background-color: var(--color-coffee);
+    background-color: var(--color-coffee);    /* set background color for body */
 }
 
 
@@ -128,5 +128,5 @@ body {
 }
 
 #timer-button:hover {
-  background-color: var(--color-dark-brown);
+  background-color: var(--color-dark-brown);    /* darker color on hover */
 }
