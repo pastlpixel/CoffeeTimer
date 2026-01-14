@@ -1,0 +1,21 @@
+{
+  "name": "CoffeeTimer",
+  "productName": "CoffeeTimer",
+  "version": "1.0.0",
+  "description": "A coffee themed pomodoro timer with 4 different time settings.",
+  "homepage": "https://github.com/pastlpixel/CoffeeTimer#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pastlpixel/CoffeeTimer.git"
+  },
+  "license": "MIT",
+  "author": "Ellen Hoepner",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "devDependencies": {
+    "electron": "^39.2.7"
+  }
+}
