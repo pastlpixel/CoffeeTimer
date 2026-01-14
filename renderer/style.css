@@ -9,6 +9,21 @@
    }
 
 
+/* hide scrollbar for all browsers */
+::-webkit-scrollbar {
+    display: none; /* for Chrome, Safari, and Opera */
+}
+html {
+  scrollbar-width: none; /* for Firefox */
+  -ms-overflow-style: none; /* for Internet Explorer and Edge */
+  font-size: 50%;
+}
+
+/* prevent scrolling */
+html, body {
+  overflow: hidden;
+}
+
 /* BODY */
 body {
     background-color: var(--color-coffee);    /* set background color for body */
@@ -17,36 +32,42 @@ body {
 
 /* START MENU */
 .start-menu h1 {
-    width: 90%;     /* width relative to parent element (div "start-menu"); same size as image grid */
-    margin: 0 auto;     /* centers header horizontally while still being box element */
+    width: 80%;     /* width relative to parent element (div "start-menu"); same size as image grid */
+    margin: 2rem auto;     /* centers header horizontally while still being box element */
     text-align: center;     /* center text */
     background-color: var(--color-white-brown);    /* set background color for text box */
     color: var(--color-dark-brown);     /* set color for header text */
-    font-size: 8vw;     /* size relative to viewport (scales with browser size) */
-    padding: 5% 3%;     /* relative to parent element (div "start-menu") */
+    font-size: 4rem;     /* size relative to viewport (scales with browser size) */
+    padding: 1.5rem 1.5rem;     /* relative to parent element (div "start-menu") */
     border-radius: 1rem;        /* relative to root (<html>); doesn't change with browser size; needs to be small because of overall size, otherwise left&right edges look 'cut off' */
+}
+
+.start-menu .grid-box {
+  display: flex;                /* turn grid box into a flex container */
+  justify-content: center;      /* center horizontally */
+  align-items: center;          /* center vertically */
 }
 
 .start-menu .image-grid {
     display: grid;                    /* enables grid layout */
     grid-template-columns: repeat(2, 1fr); /* 2 equal-width columns */
     grid-template-rows: repeat(2, 1fr);    /* 2 equal-height rows */
-    column-gap: 9%;  /* ⬅ horizontal space between columns; creates slight right shift bc width is added to total width */
-    row-gap: 4%;     /* ⬆ vertical space between rows */
-    width: 90%;                       /* grid takes up 90% of the page width; in alignment with header */
-    margin: 5% 3% 5% 3%;                /* centers the grid horizontally; adjust values after adding row-gap to make sure grid is centered on page*/
+    column-gap: 1rem;  /* ⬅ horizontal space between columns; creates slight right shift bc width is added to total width */
+    row-gap: 2rem;     /* ⬆ vertical space between rows */
+    width: 80rem; 
+    margin: 3rem 2.5rem 3rem 4.5rem;                /* centers the grid horizontally; adjust values after adding row-gap to make sure grid is centered on page*/
+  
   }
   
 .start-menu .image-grid .coffee-type-box {     /* create image boxes */
   background-color: var(--color-white-brown);       /* set color for image boxes */
-  border-radius: 20%;     /* round egdes for image boxes */
-  padding: 5%;        /* center images inside boxes */
-  width: 100%;          /* image fills its grid cell */
-  height: auto;         /* keeps the correct aspect ratio */
+  border-radius: 4rem;     /* round egdes for image boxes */
+  padding: 1rem;        /* center images inside boxes */
+  width: 90%;          /* image fills its grid cell to x%*/
   object-fit: cover;    /* ensures images fill space nicely */
   transition: transform 0.8s ease; /* delays zoom */
   text-align: center;     /* shift all content in image box (text and pictures */
-  font-size: 3vw;       /* size of text in image box */
+  font-size: 2rem;       /* size of text in image box */
   line-height: 0.5rem;    /* distance between heading and paragraph in image box */
   color: var(--color-middle-brown);    /* color for paragraphs */
 }
@@ -56,7 +77,7 @@ body {
 }
 
 .start-menu .image-grid .coffee-type-box img {
-  width: 80%;     /* set width of image in image box to 80% relative to image box width (parent element) */
+  width: 60%;     /* set width of image in image box to 80% relative to image box width (parent element) */
   height: auto;       /* keep ratios */
 }
 
@@ -78,7 +99,7 @@ body {
   align-items: center;          /* center vertically */
   height: 100vh;                /* make body fill full viewport height */
   margin: 0;                    /* remove default body margin */
-  gap:0.81rem;                     /* space between timer box and countdown text */
+  gap:0.7rem;                     /* space between timer box and countdown text */
 }
 
 #back-button {
@@ -86,7 +107,7 @@ body {
   color: var(--color-white-brown);       /* button text color */
   border: none;        /* remove default border */
   padding: 0.5em 1rem;     /* space inside button */
-  font-size: 3vw;        /* size relative to viewport (scales with browser size) */
+  font-size: 2rem;        /* size relative to viewport (scales with browser size) */
   border-radius: 1rem;       /* round edges */
   cursor: pointer;      /* change cursor on hover */
 }
@@ -97,8 +118,8 @@ body {
 
 .timer-box {
   background-color: var(--color-white-brown);       /* set color for timer boxes */
-  width: 70%;         /* width relative to parent element (div "timer-body") */
-  height: 50%;        /* height relative to parent element (div "timer-body") */
+  width: 40%;         /* width relative to parent element (div "timer-body") */
+  height: 40%;        /* height relative to parent element (div "timer-body") */
   padding: 5%;        /* space inside box */
   border-radius: 50%;      /* round edges */
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* subtle shadow for depth */
@@ -108,12 +129,12 @@ body {
 }
 
 .timer-box img {
-  width: 80%;     /* set width of image in timer box to 70% relative to timer box width (parent element) */
+  width: 70%;     /* set width of image in timer box to 70% relative to timer box width (parent element) */
   height: auto;       /* keep ratios */
 }
 
 .countdown h1 {
-  font-size: 9vw;       /* size relative to viewport (scales with browser size) */
+  font-size: 7rem;       /* size relative to viewport (scales with browser size) */
   color: var(--color-dark-brown);   /* set color for countdown text */
 }
 
@@ -122,7 +143,7 @@ body {
   color: var(--color-white-brown);       /* button text color */
   border: none;        /* remove default border */
   padding: 1rem 2rem;     /* space inside button */
-  font-size: 4vw;        /* size relative to viewport (scales with browser size) */
+  font-size: 3rem;        /* size relative to viewport (scales with browser size) */
   border-radius: 1rem;       /* round edges */
   cursor: pointer;      /* change cursor on hover */
 }
