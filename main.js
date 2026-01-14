@@ -26,17 +26,12 @@ function createMainWindow() {
     }
 
     const mainWindow = new BrowserWindow({
-        title: 'Language Learner',
+        title: 'Coffee Timer',
         width: windowWidth,
         height: windowHeight,
         minWidth: windowWidth,
         minHeight: windowHeight,
-        resizable: false,
-        // webPreferences: {
-        //     preload: path.join(__dirname, 'preload.js'),
-        //     contextIsolation: true,
-        //     nodeIntegration: false,
-        // },   
+        resizable: false, 
         icon: iconPath, // set app icon (windows & linux)
     });
 
